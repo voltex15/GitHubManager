@@ -6,10 +6,8 @@ using System.Text;
 
 namespace GitHubManager.Libraries.RestApi
 {
-	class CommitApi
+	class CommitApi : RestApi
 	{
-        private const string _baseUrl = "https://api.github.com";
-
         public string GetResponse(string user, string repository)
         {
             string url = string.Format(_baseUrl + "/repos/{0}/{1}/commits", user, repository);
